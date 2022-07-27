@@ -123,9 +123,12 @@ li {
 }
 
 input[type],
-textarea {
+textarea,
+button {
+  border: none;
   display: inline-block;
   outline: none;
+  background-color: transparent;
 }
 
 span {
@@ -162,6 +165,7 @@ span {
 }
 
 .header-top .wrapper {
+  padding: 10px 0 11px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -173,29 +177,191 @@ span {
   align-items: center;
 }
 
-.header-top-left .header-search-box {
+.header-top-left form {
+  border-radius: 3px;
+  margin: 0 28px 0 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.1);
 }
 
-.header-search-box .search-icon {
+.header-top-left input {
+  padding: 9px 5px 8px 15px;
+  box-shadow: inset 0 0 5px var(--clr-grey2);
+}
+
+.header-top-left button {
+  width: 32px;
+  height: 32px;
   position: relative;
   text-indent: -99999px;
-  font-size: 25px;
-  width: 30px;
+  font-size: 18px;
+  background-color: var(--clr-grey5);
+  color: var(--clr-white);
 }
 
-.header-search-box .search-icon::before {
-  content: '\f091';
+.header-top-left button::before {
+  content: '\f002';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-weight: 'fontAwesome';
+  font-family: 'fontAwesome';
   text-indent: 0;
+}
+
+.header-top-right {
+  gap: 31px;
+}
+
+.header-shiping-returns a {
+  transform: scaley(1.5);
+  font-size: 11px;
+  text-transform: capitalize;
+  color: var(--clr-grey2);
+  font-weight: 600;
+}
+
+.header-top-right a {
+  padding: 0 0 6px;
+  position: relative;
+  font-size: 11px;
+  color: var(--clr-grey2);
+}
+
+.header-wishlist a::before {
+  content: '\f005';
+  margin-right: 3px;
+  font-family: 'fontAwesome';
+  text-indent: 0;
+  font-size: 12px;
+  position: inherit;
+  bottom: 2px;
+}
+
+.header-login a::before {
+  content: '\f234';
+  margin-right: 3px;
+  font-family: 'fontAwesome';
+  text-indent: 0;
+  font-size: 20px;
+}
+
+.header-cart {
+  margin-right: 20px;
+  position: relative;
+}
+
+.header-cart a {
+  padding: 10px 15px;
+  position: relative;
+  text-indent: -99999px;
+  z-index: 1;
+}
+
+.header-cart a::before {
+  content: '\f07a';
+  font-family: 'fontAwesome';
+  text-indent: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+
+.header-cart span {
+  padding: 1px 7px;
+  border-radius: 10px;
+  position: absolute;
+  top: 10%;
+  left: 60%;
+  z-index: 2;
+  background-color: var(--clr-pink);
+  color: var(--clr-white);
+  font-weight: 600;
+  font-size: 10px;
 }
 
 /* header top section ends here */
 
+/* header bottom section starts here */
+
+nav {
+  background-color: var(--clr-black);
+}
+
+nav .wrapper {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+nav .main-menu {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  position: relative;
+}
+
+nav .menu-list:last-child { 
+  position: absolute;
+  right: 0;
+}
+
+nav .menu-list:nth-child(6) > a,
+nav .menu-list:nth-child(7) > a {
+  color: var(--clr-yellow);
+}
+
+nav .menu-list:nth-child(7) > a {
+  text-transform: uppercase;
+}
+
+nav a {
+  position: relative;
+  color: var(--clr-white);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+nav .menu-list > a::after {
+  content: '\f078';
+  margin-left: 4px;
+  font-family: 'fontAwesome';
+  text-indent: 0;
+  font-size: 8px;
+  vertical-align: middle;
+}
+
+nav .sub-menu {
+  width: 100%;
+  position: absolute;
+  top: 145%;
+  left: 0;
+  background-color: var(--clr-yellow);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: .3s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+nav .menu-list a:hover ~ .sub-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+nav .sub-menu-list > a {
+  color: var(--clr-grey5);
+}
+
+/* header bottom section ends here */
 
 /*=================================
   Header styling ends here
