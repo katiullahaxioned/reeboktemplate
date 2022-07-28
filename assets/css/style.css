@@ -799,6 +799,10 @@ color: var(--clr-white);
   z-index: 2;
 }
 
+.footer-menu-list a[title="Facebook Share"]:hover {
+  opacity: .7;
+}
+
 .footer-menu-list a[title="Facebook Share"]::before {
   content: '';
   width: 100%;
@@ -835,6 +839,70 @@ a[title="Facebook Share"] .fb-share::before {
 }
 
 /* footer sub-section 2 ends here */
+
+/* footer sub-section 3 starts here */
+
+.footer-sign-up {
+  background-color: var(--clr-grey2);
+}
+
+.footer-sign-up .wrapper {
+  padding: 20px 0;
+}
+
+.footer-sign-up ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-sign-up li:first-child {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--clr-white);
+  transform: scaleY(2);
+}
+
+.footer-sign-up li:first-child span:first-child {
+  color: var(--clr-pink);
+}
+
+.footer-sign-up li:last-child a {
+  padding: 10px 13px 10px 6px;
+  border-radius: 5px;
+  background-color: var(--clr-pink);
+  color: var(--clr-white);
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+
+.footer-sign-up li:last-child a:hover {
+  background-color: var(--clr-white);
+  color: var(--clr-pink);
+}
+
+.footer-sign-up li:last-child a:hover::after {
+  background-color: var(--clr-pink);
+  color: var(--clr-white);
+}
+
+.footer-sign-up li:last-child a::after {
+  content: '\f054';
+  margin-left: 65px;
+  font-family: 'fontAwesome';
+  text-indent: 0;
+  font-size: 8px;
+  background-color: var(--clr-white);
+  color: var(--clr-pink);
+  padding: 6px 7px;
+  vertical-align: middle;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+/* footer sub-section 3 ends here */
 
  /*=================================
   footer styling ends here
