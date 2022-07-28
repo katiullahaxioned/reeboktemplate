@@ -148,6 +148,14 @@ span {
   text-transform: uppercase;
 }
 
+.section-heading {
+  transform: scaleY(1.5);
+  color: var(--clr-grey2);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 /* common styling ends here */
 
 /*for wrapper*/
@@ -549,7 +557,60 @@ color: var(--clr-white);
 
 /* banner section ends here */
 
+/* general category section starts here */
 
+.general-category {
+  background-color: var(--clr-offwhite);
+}
+
+.general-category .wrapper {
+  padding: 58px 0 16px;
+}
+
+.general-category-menu {
+  display: flex;
+  align-items: center;
+}
+
+.general-category-list > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.general-category-list .section-heading {
+  margin-bottom: 10px;
+  flex: 1 0 100%;
+}
+
+.general-category-list .section-heading + li {
+  margin-right: 30px;
+  margin-left: 15px;
+}
+
+.general-category-submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.general-category-submenu a {
+  font-size: 14px;
+  color: var(--clr-grey3);
+}
+
+.general-category-submenu a:hover {
+  color: var(--clr-pink);
+}
+
+.general-category-submenu a::before {
+  content: '\f054';
+  margin-right: 3px;
+  font-family: 'fontAwesome';
+  text-indent: 0;
+  font-size: 8px;
+}
+
+/* general category section ends here */
 
 
 /*=================================
