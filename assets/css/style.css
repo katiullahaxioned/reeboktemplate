@@ -847,7 +847,7 @@ a[title="Facebook Share"] .fb-share::before {
 }
 
 .footer-sign-up .wrapper {
-  padding: 20px 0;
+  padding: 37px 0 27px;
 }
 
 .footer-sign-up ul {
@@ -862,14 +862,21 @@ a[title="Facebook Share"] .fb-share::before {
   font-size: 15px;
   color: var(--clr-white);
   transform: scaleY(2);
+  position: relative;
+}
+
+.footer-sign-up li:first-child span {
+  position: relative;
+  transform: translateY(-2px);
 }
 
 .footer-sign-up li:first-child span:first-child {
   color: var(--clr-pink);
+  margin-right: 2px;
 }
 
 .footer-sign-up li:last-child a {
-  padding: 10px 13px 10px 6px;
+  padding: 10px 13px 10px 7px;
   border-radius: 5px;
   background-color: var(--clr-pink);
   color: var(--clr-white);
@@ -890,19 +897,126 @@ a[title="Facebook Share"] .fb-share::before {
 
 .footer-sign-up li:last-child a::after {
   content: '\f054';
-  margin-left: 65px;
+  margin-left: 62px;
   font-family: 'fontAwesome';
   text-indent: 0;
-  font-size: 8px;
+  font-size: 10px;
   background-color: var(--clr-white);
   color: var(--clr-pink);
-  padding: 6px 7px;
+  padding: 4px 5px;
   vertical-align: middle;
   border-radius: 50%;
   transition: .3s;
 }
 
 /* footer sub-section 3 ends here */
+
+/* footer sub-section 4 starts here */
+
+.footer-payment-mode {
+  background-color: var(--clr-grey3);
+}
+
+.footer-payment-mode .wrapper {
+  padding: 43px 0 78px;
+}
+
+.footer-payment-mode ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-payment-mode li {
+  flex-shrink: 0;
+}
+
+/* footer sub-section 4 ends here */
+
+/* footer sub-section 5 starts here */
+
+.footer-copy-right {
+  background-color: var(--clr-grey3);
+}
+
+.footer-copy-right .wrapper {
+  padding: 10px 0 13px 14.5%;
+}
+
+.footer-copy-right span,
+.footer-copy-right a {
+  font-size: 14px;
+  color: var(--clr-grey1);
+}
+
+.footer-copy-right a:hover {
+  text-decoration: underline;
+  color: var(--clr-grey2);
+}
+
+.footer-copy-right figure {
+  display: inline-block;
+}
+
+/* footer sub-section 5 ends here */
+
+/* move-to-top-&-chat button section starts here */
+
+.top-chat {
+  position: fixed;
+  right: 2%;
+  bottom: 32px;
+  z-index: 4;
+}
+
+.top-chat a:hover {
+  opacity: 0.5;
+}
+
+.top-chat a:first-child {
+  text-transform: uppercase;
+  color: var(--clr-white);
+  font-size: 10px;
+  padding: 20px 10px 10px;
+  background-color: var(--clr-black);
+  position: relative;
+  border-radius: 5px;
+}
+
+.top-chat a:first-child::before {
+  content: '\f0d8';
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'fontAwesome';
+  text-indent: 0;
+}
+
+.top-chat a:last-child {
+  padding: 20px 0 0 20px;
+  margin-left: 14px;
+  position: relative;
+  color: var(--clr-white);
+  font-size: 13px;
+  text-shadow: 1px 1px 0 var(--clr-black);
+  text-transform: capitalize;
+}
+
+.top-chat a:last-child::before {
+  content: '\f0e6';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: var(--clr-black);
+  font-family: 'fontAwesome';
+  font-size: 50px;
+  text-indent: 0;
+}
+
+/* move-to-top-&-chat button section ends here */
 
  /*=================================
   footer styling ends here
