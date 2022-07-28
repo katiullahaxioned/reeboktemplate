@@ -696,11 +696,145 @@ color: var(--clr-white);
   footer styling starts here
 =================================*/ 
 
+/* footer sub-section 1 starts here */
 
+.footer-brand-contact {
+  background-color: var(--clr-grey4);
+}
 
+.footer-brand-contact ul {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--clr-white);
+}
 
+.footer-brand-contact li {
+  padding: 18px 20px;
+}
 
+.footer-brand-contact li:first-child {
+  padding-left: 0;
+}
 
+.footer-brand-contact li:nth-child(2),
+.footer-brand-contact li:nth-child(3) {
+  box-shadow: inset 3px 0 6px var(--clr-grey5);
+}
+
+.footer-brand-contact a {
+  color: var(--clr-white);
+}
+
+.footer-brand-contact a:hover {
+  color: var(--clr-grey1);
+  text-decoration: underline;
+}
+
+.footer-brand-contact a[title="customer.care@reebok.com"]::first-letter {
+  text-transform: lowercase;
+}
+
+/* footer sub-section 1 ends here */
+
+/* footer sub-section 2 starts here */
+
+.footer-menu {
+  background-color: var(--clr-grey3);
+}
+
+.footer-menu .wrapper {
+  padding: 42px 0 37px;
+}
+
+.footer-menu .wrapper > ul {
+  display: flex;
+  align-items: flex-start;
+} 
+
+.footer-menu-list {
+  flex-basis: 19%;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.footer-menu-list .footer-submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.footer-submenu li:first-child {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: var(--clr-grey1);
+  font-weight: 600;
+}
+
+.footer-submenu li:not(:first-child) a {
+  color: var(--clr-white);
+  font-size: 12px;
+}
+
+.footer-submenu li:not(:first-child) a:hover {
+  padding-left: 4px;
+  color: var(--clr-pink)
+}
+
+.footer-menu-list:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-menu-list a[title="Facebook Share"] {
+  margin-right: 18px;
+  background-color: var(--clr-fb);
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  border-radius: 3px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-menu-list a[title="Facebook Share"]::before {
+  content: '';
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--clr-white);
+  z-index: 1;
+  border-radius: 3px 3px 0 0;
+}
+
+a[title="Facebook Share"] span {
+  padding: 3px 4px;
+  z-index: 2;
+}
+
+a[title="Facebook Share"] span:first-child {
+  color: var(--clr-grey5);
+}
+
+a[title="Facebook Share"] .fb-share {
+  color: var(--clr-white);
+  font-weight: 600;
+}
+
+a[title="Facebook Share"] .fb-share::before {
+  content: '\f230';
+  margin-right: 7px;
+  font-family: 'fontAwesome';
+  text-indent: 0;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/* footer sub-section 2 ends here */
 
  /*=================================
   footer styling ends here
