@@ -651,6 +651,43 @@ color: var(--clr-white);
 
 /* fitness & training section ends here */
 
+/* world of reebok section starts here */
+
+.world-of-reebok .wrapper {
+  padding: 54px 0 37px;
+  display: flex;
+  flex-direction: column;
+}
+
+.world-of-reebok ul {
+  margin-top: 27px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.world-of-reebok li {
+  flex-basis: 23.5%;
+}
+
+.world-of-reebok a {
+  padding: 20px;
+  color: var(--clr-grey5);
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.world-of-reebok a:hover {
+  color: var(--clr-pink);
+}
+
+.world-of-reebok a[title="REEBOK CLASSIC"] {
+  text-transform: uppercase;
+}
+
+/* world of reebok section ends here */
+
 /*=================================
   main styling ends here
 =================================*/
