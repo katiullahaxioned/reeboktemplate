@@ -114,12 +114,12 @@ li {
   --clr-grey3: #42423d;
   --clr-grey4: #32332f;
   --clr-grey5: #262626;
+  --clr-fb: #4267b2;
   --clr-pink: #c22436;
   --clr-black: #000;
   --clr-white: #fff;
   --clr-yellow: #eacb18;
   --clr-offwhite: #f2f2f2;
-  --clr-fb: #4267b2;
   --bg-transparent1: rgba(0,0,0,0.1);
   --bg-transparent2: rgba(0,0,0,0.5);
 }
@@ -138,10 +138,10 @@ span {
 }
 
 ::placeholder {
-  text-transform: capitalize;
-  font-weight: 600;
-  font-size: 15px;
   color: var(--clr-grey2);
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 ::first-letter {
@@ -177,8 +177,8 @@ span {
 .header-top .wrapper {
   padding: 10px 0 11px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header-top-left,
@@ -206,10 +206,10 @@ span {
   width: 32px;
   padding: 6px 0 5px;
   position: relative;
-  text-indent: -99999px;
-  font-size: 18px;
   background-color: var(--clr-grey5);
   color: var(--clr-white);
+  font-size: 18px;
+  text-indent: -99999px;
 }
 
 .header-top-left button:hover::before {
@@ -222,9 +222,9 @@ span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: .3s;
   font-family: 'fontAwesome';
   text-indent: 0;
-  transition: .3s;
 }
 
 .header-top-right {
@@ -233,10 +233,10 @@ span {
 
 .header-shiping-returns a {
   transform: scaley(1.5);
-  font-size: 11px;
-  text-transform: capitalize;
   color: var(--clr-grey2);
+  font-size: 11px;
   font-weight: 600;
+  text-transform: capitalize;
 }
 
 .header-shiping-returns a:hover {
@@ -245,27 +245,27 @@ span {
 
 .header-top-right a {
   position: relative;
-  font-size: 11px;
   color: var(--clr-grey2);
+  font-size: 11px;
   vertical-align: bottom;
 }
 
 .header-wishlist a::before {
   content: '\f005';
   margin-right: 3px;
-  font-family: 'fontAwesome';
-  text-indent: 0;
-  font-size: 12px;
   position: inherit;
   bottom: 2px;
+  font-family: 'fontAwesome';
+  font-size: 12px;
+  text-indent: 0;
 }
 
 .header-login a::before {
   content: '\f234';
   margin-right: 3px;
   font-family: 'fontAwesome';
-  text-indent: 0;
   font-size: 20px;
+  text-indent: 0;
 }
 
 .header-cart {
@@ -276,19 +276,19 @@ span {
 .header-cart a {
   padding: 10px 15px;
   position: relative;
-  text-indent: -99999px;
   z-index: 1;
+  text-indent: -99999px;
 }
 
 .header-cart a::before {
   content: '\f07a';
-  font-family: 'fontAwesome';
-  text-indent: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: 'fontAwesome';
   font-size: 30px;
+  text-indent: 0;
 }
 
 .header-cart span {
@@ -300,8 +300,8 @@ span {
   z-index: 2;
   background-color: var(--clr-pink);
   color: var(--clr-white);
-  font-weight: 600;
   font-size: 10px;
+  font-weight: 600;
 }
 
 .header-top-right a:hover,
@@ -326,8 +326,8 @@ nav .wrapper {
 nav .main-menu {
   width: 100%;
   display: flex;
-  gap: 12px;
   align-items: center;
+  gap: 12px;
   position: relative;
 }
 
@@ -360,30 +360,30 @@ nav .menu-list > a::after {
   content: '\f078';
   margin-left: 4px;
   font-family: 'fontAwesome';
-  text-indent: 0;
   font-size: 8px;
+  text-indent: 0;
   vertical-align: middle;
 }
 
 nav .sub-menu {
   width: 100%;
-  position: absolute;
-  top: 145%;
-  left: 0;
-  background-color: var(--clr-yellow);
   padding: 15px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  transition: .3s;
-  visibility: hidden;
-  opacity: 0;
+  position: absolute;
+  top: 145%;
+  left: 0;
   z-index: 5;
+  transition: .3s;
+  background-color: var(--clr-yellow);
+  opacity: 0;
+  visibility: hidden;
 }
 
 nav .menu-list a:hover ~ .sub-menu {
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
 }
 
 nav .sub-menu-list > a {
@@ -435,14 +435,14 @@ nav .sub-menu-list a:hover {
   position: absolute;
   top: 0;
   right: 12.3%;
+  color: var(--clr-grey5);
   text-align: right;
   text-transform: uppercase;
-  color: var(--clr-grey5);
 }
 
 .banner-brand-name span {
-  font-weight: 500;
   font-size: 40px;
+  font-weight: 500;
   vertical-align: middle;
 }
 
@@ -454,18 +454,18 @@ nav .sub-menu-list a:hover {
 
 .banner-slider-content > p:first-of-type {
   margin: 6px 10px 0 0;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 4px;
-  font-size: 15px;
 }
 
 .banner-slider-content > p:last-of-type {
   margin: 25px 0 60px;
-  color: var(--clr-pink);
-  font-weight: 600;
-  font-size: 15px;
-  word-spacing: 1px;
   transform: scaleY(1.5);
+  color: var(--clr-pink);
+  font-size: 15px;
+  font-weight: 600;
+  word-spacing: 1px;
 }
 
 .banner-button-box {
@@ -475,16 +475,16 @@ nav .sub-menu-list a:hover {
 }
 
 .banner-button-box a {
-  padding: 9px 0;
   width: 25.3%;
-  text-align: center;
-  color: var(--clr-white);
-  font-weight: 600;
-  font-size: 15px;
-  transform: scaleY(1.7);
+  padding: 9px 0;
   border: 1px solid var(--clr-offwhite);
-  background: var(--bg-transparent2);
   border-radius: 2px;
+  transform: scaleY(1.7);
+  background: var(--bg-transparent2);
+  color: var(--clr-white);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
 }
 
 .banner-button-box a:hover {
@@ -493,27 +493,27 @@ nav .sub-menu-list a:hover {
 
 .banner > .wrapper .slider-control {
   width: 26.5%;
-  margin-left: 5px;
   padding: 5px 32px;
+  border-radius: 20px;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
   position: absolute;
   bottom: 25px;
   background-color: var(--bg-transparent2);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
 }
 
 .slider-control-box {
-  display: flex;
-  align-items: center;
   padding: 0 8px;
   border-right: 1px dashed var(--clr-grey1);
+  display: flex;
+  align-items: center;
 }
 
 .slider-control-box span {
   position: relative;
-  text-indent: -99999px;
   transition: .3s;
+  text-indent: -99999px;
 }
 
 .slider-control-box span:hover {
@@ -523,13 +523,13 @@ nav .sub-menu-list a:hover {
 .slider-control-box .slider-auto-play::before {
 content: '\f04c';
 position: absolute;
-font-family: 'fontAwesome';
-text-indent: 0;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-font-size: 10px;
 color: var(--clr-white);
+font-family: 'fontAwesome';
+font-size: 10px;
+text-indent: 0;
 }
 
 .slider-auto-play {
@@ -539,8 +539,8 @@ color: var(--clr-white);
 .slider-control-btn {
   width: 13px;
   height: 13px;
-  margin: 0 3px;
   border-radius: 50%;
+  margin: 0 3px;
   background-color: var(--clr-grey1);
 }
 
@@ -550,9 +550,9 @@ color: var(--clr-white);
 
 .slider-brand-name span {
   padding: 0 10px;
-  text-transform: uppercase;
   color: var(--clr-white);
   font-size: 12px;
+  text-transform: uppercase;
 }
 
 /* banner section ends here */
@@ -583,8 +583,7 @@ color: var(--clr-white);
 }
 
 .general-category-list .section-heading + li {
-  margin-right: 30px;
-  margin-left: 15px;
+  margin: 0 30px 0 15px;
 }
 
 .general-category-submenu {
@@ -594,8 +593,8 @@ color: var(--clr-white);
 }
 
 .general-category-submenu a {
-  font-size: 14px;
   color: var(--clr-grey3);
+  font-size: 14px;
 }
 
 .general-category-submenu a:hover {
@@ -606,8 +605,8 @@ color: var(--clr-white);
   content: '\f054';
   margin-right: 3px;
   font-family: 'fontAwesome';
-  text-indent: 0;
   font-size: 8px;
+  text-indent: 0;
 }
 
 /* general category section ends here */
@@ -629,14 +628,14 @@ color: var(--clr-white);
   margin-top: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .fitness-training li {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   gap: 47px;
 }
@@ -673,9 +672,9 @@ color: var(--clr-white);
 .world-of-reebok a {
   padding: 20px;
   color: var(--clr-grey5);
-  text-transform: capitalize;
   font-size: 14px;
   font-weight: 600;
+  text-transform: capitalize;
 }
 
 .world-of-reebok a:hover {
@@ -705,8 +704,8 @@ color: var(--clr-white);
 .footer-brand-contact ul {
   display: flex;
   align-items: center;
-  font-size: 14px;
   color: var(--clr-white);
+  font-size: 14px;
 }
 
 .footer-brand-contact li {
@@ -766,10 +765,10 @@ color: var(--clr-white);
 }
 
 .footer-submenu li:first-child {
-  text-transform: uppercase;
-  font-size: 13px;
   color: var(--clr-grey1);
+  font-size: 13px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .footer-submenu li:not(:first-child) a {
@@ -784,19 +783,19 @@ color: var(--clr-white);
 
 .footer-menu-list:last-child {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 .footer-menu-list a[title="Facebook Share"] {
   margin-right: 18px;
-  background-color: var(--clr-fb);
-  display: flex;
-  flex-direction: column;
-  font-size: 12px;
   border-radius: 3px;
+  display: flex;
   align-items: center;
+  flex-direction: column;
   position: relative;
   z-index: 2;
+  background-color: var(--clr-fb);
+  font-size: 12px;
 }
 
 .footer-menu-list a[title="Facebook Share"]:hover {
@@ -807,12 +806,12 @@ color: var(--clr-white);
   content: '';
   width: 100%;
   height: 50%;
+  border-radius: 3px 3px 0 0;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--clr-white);
   z-index: 1;
-  border-radius: 3px 3px 0 0;
+  background-color: var(--clr-white);
 }
 
 a[title="Facebook Share"] span {
@@ -833,8 +832,8 @@ a[title="Facebook Share"] .fb-share::before {
   content: '\f230';
   margin-right: 7px;
   font-family: 'fontAwesome';
-  text-indent: 0;
   font-size: 14px;
+  text-indent: 0;
   vertical-align: middle;
 }
 
@@ -857,12 +856,12 @@ a[title="Facebook Share"] .fb-share::before {
 }
 
 .footer-sign-up li:first-child {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 15px;
-  color: var(--clr-white);
-  transform: scaleY(2);
   position: relative;
+  transform: scaleY(2);
+  color: var(--clr-white);
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .footer-sign-up li:first-child span {
@@ -871,8 +870,8 @@ a[title="Facebook Share"] .fb-share::before {
 }
 
 .footer-sign-up li:first-child span:first-child {
-  color: var(--clr-pink);
   margin-right: 2px;
+  color: var(--clr-pink);
 }
 
 .footer-sign-up li:last-child a {
@@ -880,9 +879,9 @@ a[title="Facebook Share"] .fb-share::before {
   border-radius: 5px;
   background-color: var(--clr-pink);
   color: var(--clr-white);
+  font-size: 13px;
   font-weight: 600;
   text-transform: capitalize;
-  font-size: 13px;
 }
 
 .footer-sign-up li:last-child a:hover {
@@ -897,16 +896,16 @@ a[title="Facebook Share"] .fb-share::before {
 
 .footer-sign-up li:last-child a::after {
   content: '\f054';
+  padding: 4px 5px;
+  border-radius: 50%;
   margin-left: 62px;
+  transition: .3s;
+  background-color: var(--clr-white);
+  color: var(--clr-pink);
   font-family: 'fontAwesome';
   text-indent: 0;
   font-size: 10px;
-  background-color: var(--clr-white);
-  color: var(--clr-pink);
-  padding: 4px 5px;
   vertical-align: middle;
-  border-radius: 50%;
-  transition: .3s;
 }
 
 /* footer sub-section 3 ends here */
@@ -923,8 +922,8 @@ a[title="Facebook Share"] .fb-share::before {
 
 .footer-payment-mode ul {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -946,13 +945,13 @@ a[title="Facebook Share"] .fb-share::before {
 
 .footer-copy-right span,
 .footer-copy-right a {
-  font-size: 14px;
   color: var(--clr-grey1);
+  font-size: 14px;
 }
 
 .footer-copy-right a:hover {
-  text-decoration: underline;
   color: var(--clr-grey2);
+  text-decoration: underline;
 }
 
 .footer-copy-right figure {
@@ -975,13 +974,13 @@ a[title="Facebook Share"] .fb-share::before {
 }
 
 .top-chat a:first-child {
-  text-transform: uppercase;
+  padding: 20px 10px 10px;
+  border-radius: 5px;
+  position: relative;
+  background-color: var(--clr-black);
   color: var(--clr-white);
   font-size: 10px;
-  padding: 20px 10px 10px;
-  background-color: var(--clr-black);
-  position: relative;
-  border-radius: 5px;
+  text-transform: uppercase;
 }
 
 .top-chat a:first-child::before {
