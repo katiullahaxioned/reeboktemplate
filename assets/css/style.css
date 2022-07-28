@@ -120,6 +120,8 @@ li {
   --clr-yellow: #eacb18;
   --clr-offwhite: #f2f2f2;
   --clr-fb: #4267b2;
+  --bg-transparent1: rgba(0,0,0,0.1);
+  --bg-transparent2: rgba(0,0,0,0.5);
 }
 
 input[type],
@@ -184,7 +186,7 @@ span {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: rgba(0,0,0,0.1);
+  background-color: var(--bg-transparent1);
 }
 
 .header-top-left input {
@@ -194,12 +196,16 @@ span {
 
 .header-top-left button {
   width: 32px;
-  height: 32px;
+  padding: 6px 0 5px;
   position: relative;
   text-indent: -99999px;
   font-size: 18px;
   background-color: var(--clr-grey5);
   color: var(--clr-white);
+}
+
+.header-top-left button:hover::before {
+  color: var(--clr-yellow);
 }
 
 .header-top-left button::before {
@@ -210,6 +216,7 @@ span {
   transform: translate(-50%, -50%);
   font-family: 'fontAwesome';
   text-indent: 0;
+  transition: .3s;
 }
 
 .header-top-right {
@@ -224,11 +231,15 @@ span {
   font-weight: 600;
 }
 
+.header-shiping-returns a:hover {
+  color: var(--clr-grey5);
+}
+
 .header-top-right a {
-  padding: 0 0 6px;
   position: relative;
   font-size: 11px;
   color: var(--clr-grey2);
+  vertical-align: bottom;
 }
 
 .header-wishlist a::before {
@@ -285,6 +296,11 @@ span {
   font-size: 10px;
 }
 
+.header-top-right a:hover,
+.header-top-right a:hover::before {
+  color: var(--clr-grey5);
+}
+
 /* header top section ends here */
 
 /* header bottom section starts here */
@@ -328,6 +344,10 @@ nav a {
   font-weight: 600;
 }
 
+nav a:hover {
+  color: var(--clr-yellow);
+}
+
 nav .menu-list > a::after {
   content: '\f078';
   margin-left: 4px;
@@ -350,6 +370,7 @@ nav .sub-menu {
   transition: .3s;
   visibility: hidden;
   opacity: 0;
+  z-index: 5;
 }
 
 nav .menu-list a:hover ~ .sub-menu {
@@ -359,6 +380,10 @@ nav .menu-list a:hover ~ .sub-menu {
 
 nav .sub-menu-list > a {
   color: var(--clr-grey5);
+}
+
+nav .sub-menu-list a:hover {
+  color: var(--clr-grey2);
 }
 
 /* header bottom section ends here */
@@ -371,9 +396,158 @@ nav .sub-menu-list > a {
   main styling starts here
 =================================*/
 
+/* banner section starts here */
 
+.banner {
+  position: relative;
+}
 
+.banner .slider-list {
+  width: 100%;
+  height: 62vh;
+  position: relative;
+}
 
+.slider-list:not(:first-child) {
+  display: none;
+}
+
+.slider-list figure,
+.slider-list > figure img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  object-fit: cover;
+}
+
+.slider-list .wrapper {
+  padding: 66px 0 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 12.3%;
+  text-align: right;
+  text-transform: uppercase;
+  color: var(--clr-grey5);
+}
+
+.banner-brand-name span {
+  font-weight: 500;
+  font-size: 40px;
+  vertical-align: middle;
+}
+
+.banner-brand-name img {
+  width: 35.5%;
+  margin-left: 25px;
+  box-shadow: 0 0 5px var(--clr-black);
+}
+
+.banner-slider-content > p:first-of-type {
+  margin: 6px 10px 0 0;
+  font-weight: 600;
+  letter-spacing: 4px;
+  font-size: 15px;
+}
+
+.banner-slider-content > p:last-of-type {
+  margin: 25px 0 60px;
+  color: var(--clr-pink);
+  font-weight: 600;
+  font-size: 15px;
+  word-spacing: 1px;
+  transform: scaleY(1.5);
+}
+
+.banner-button-box {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.banner-button-box a {
+  padding: 9px 0;
+  width: 25.3%;
+  text-align: center;
+  color: var(--clr-white);
+  font-weight: 600;
+  font-size: 15px;
+  transform: scaleY(1.7);
+  border: 1px solid var(--clr-offwhite);
+  background: var(--bg-transparent2);
+  border-radius: 2px;
+}
+
+.banner-button-box a:hover {
+  background-color: var(--clr-pink);
+}
+
+.banner > .wrapper .slider-control {
+  width: 26.5%;
+  margin-left: 5px;
+  padding: 5px 32px;
+  position: absolute;
+  bottom: 25px;
+  background-color: var(--bg-transparent2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.slider-control-box {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  border-right: 1px dashed var(--clr-grey1);
+}
+
+.slider-control-box span {
+  position: relative;
+  text-indent: -99999px;
+  transition: .3s;
+}
+
+.slider-control-box span:hover {
+  background-color: var(--clr-white);
+}
+
+.slider-control-box .slider-auto-play::before {
+content: '\f04c';
+position: absolute;
+font-family: 'fontAwesome';
+text-indent: 0;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 10px;
+color: var(--clr-white);
+}
+
+.slider-auto-play {
+  margin-right: 10px;
+}
+
+.slider-control-btn {
+  width: 13px;
+  height: 13px;
+  margin: 0 3px;
+  border-radius: 50%;
+  background-color: var(--clr-grey1);
+}
+
+.slider-control-btn:nth-child(2) {
+  background-color: var(--clr-white);
+}
+
+.slider-brand-name span {
+  padding: 0 10px;
+  text-transform: uppercase;
+  color: var(--clr-white);
+  font-size: 12px;
+}
+
+/* banner section ends here */
 
 
 
