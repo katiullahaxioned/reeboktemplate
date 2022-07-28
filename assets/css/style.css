@@ -110,7 +110,7 @@ li {
 
 :root {
   --clr-grey1: #989898;
-  --clr-grey2: #6c6f64;
+  --clr-grey2: #494948;
   --clr-grey3: #42423d;
   --clr-grey4: #32332f;
   --clr-grey5: #262626;
@@ -175,7 +175,6 @@ span {
 }
 
 .header-top .wrapper {
-  padding: 10px 0 11px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -212,10 +211,6 @@ span {
   text-indent: -99999px;
 }
 
-.header-top-left button:hover::before {
-  color: var(--clr-yellow);
-}
-
 .header-top-left button::before {
   content: '\f002';
   position: absolute;
@@ -227,10 +222,6 @@ span {
   text-indent: 0;
 }
 
-.header-top-right {
-  gap: 31px;
-}
-
 .header-shiping-returns a {
   transform: scaley(1.5);
   color: var(--clr-grey2);
@@ -239,8 +230,13 @@ span {
   text-transform: capitalize;
 }
 
-.header-shiping-returns a:hover {
-  color: var(--clr-grey5);
+.header-wishlist {
+  box-shadow: inset 2px 0 5px var(--bg-transparent1);
+  padding: 17px 15px 18px;
+}
+.header-login {
+  box-shadow: 2px 0 5px var(--bg-transparent1);
+  padding: 15px 15px 18px;
 }
 
 .header-top-right a {
@@ -269,12 +265,15 @@ span {
 }
 
 .header-cart {
-  margin-right: 20px;
+  margin-right: 5px;
   position: relative;
 }
 
+.header-cart {
+  padding: 17px 32px 18px;
+}
+
 .header-cart a {
-  padding: 10px 15px;
   position: relative;
   z-index: 1;
   text-indent: -99999px;
@@ -295,18 +294,13 @@ span {
   padding: 1px 7px;
   border-radius: 10px;
   position: absolute;
-  top: 10%;
+  top: 20%;
   left: 60%;
   z-index: 2;
   background-color: var(--clr-pink);
   color: var(--clr-white);
   font-size: 10px;
   font-weight: 600;
-}
-
-.header-top-right a:hover,
-.header-top-right a:hover::before {
-  color: var(--clr-grey5);
 }
 
 /* header top section ends here */
@@ -352,10 +346,6 @@ nav a {
   font-weight: 600;
 }
 
-nav a:hover {
-  color: var(--clr-yellow);
-}
-
 nav .menu-list > a::after {
   content: '\f078';
   margin-left: 4px;
@@ -388,10 +378,6 @@ nav .menu-list a:hover ~ .sub-menu {
 
 nav .sub-menu-list > a {
   color: var(--clr-grey5);
-}
-
-nav .sub-menu-list a:hover {
-  color: var(--clr-grey2);
 }
 
 /* header bottom section ends here */
@@ -487,10 +473,6 @@ nav .sub-menu-list a:hover {
   text-align: center;
 }
 
-.banner-button-box a:hover {
-  background-color: var(--clr-pink);
-}
-
 .banner > .wrapper .slider-control {
   width: 26.5%;
   padding: 5px 32px;
@@ -514,10 +496,6 @@ nav .sub-menu-list a:hover {
   position: relative;
   transition: .3s;
   text-indent: -99999px;
-}
-
-.slider-control-box span:hover {
-  background-color: var(--clr-white);
 }
 
 .slider-control-box .slider-auto-play::before {
@@ -597,10 +575,6 @@ text-indent: 0;
   font-size: 14px;
 }
 
-.general-category-submenu a:hover {
-  color: var(--clr-pink);
-}
-
 .general-category-submenu a::before {
   content: '\f054';
   margin-right: 3px;
@@ -615,7 +589,8 @@ text-indent: 0;
 
 .fitness-training {
   background: url(../images/fitnesstrainingbg.png) no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .fitness-training .wrapper {
@@ -642,10 +617,6 @@ text-indent: 0;
 
 .fitness-training figure {
   box-shadow: 0 0 5px var(--clr-grey2);
-}
-
-.fitness-training-link a:hover {
-  color: var(--clr-pink);
 }
 
 /* fitness & training section ends here */
@@ -675,10 +646,6 @@ text-indent: 0;
   font-size: 14px;
   font-weight: 600;
   text-transform: capitalize;
-}
-
-.world-of-reebok a:hover {
-  color: var(--clr-pink);
 }
 
 .world-of-reebok a[title="REEBOK CLASSIC"] {
@@ -723,11 +690,6 @@ text-indent: 0;
 
 .footer-brand-contact a {
   color: var(--clr-white);
-}
-
-.footer-brand-contact a:hover {
-  color: var(--clr-grey1);
-  text-decoration: underline;
 }
 
 .footer-brand-contact a[title="customer.care@reebok.com"]::first-letter {
@@ -776,11 +738,6 @@ text-indent: 0;
   font-size: 12px;
 }
 
-.footer-submenu li:not(:first-child) a:hover {
-  padding-left: 4px;
-  color: var(--clr-pink)
-}
-
 .footer-menu-list:last-child {
   display: flex;
   align-items: center;
@@ -796,10 +753,6 @@ text-indent: 0;
   z-index: 2;
   background-color: var(--clr-fb);
   font-size: 12px;
-}
-
-.footer-menu-list a[title="Facebook Share"]:hover {
-  opacity: .7;
 }
 
 .footer-menu-list a[title="Facebook Share"]::before {
@@ -884,16 +837,6 @@ a[title="Facebook Share"] .fb-share::before {
   text-transform: capitalize;
 }
 
-.footer-sign-up li:last-child a:hover {
-  background-color: var(--clr-white);
-  color: var(--clr-pink);
-}
-
-.footer-sign-up li:last-child a:hover::after {
-  background-color: var(--clr-pink);
-  color: var(--clr-white);
-}
-
 .footer-sign-up li:last-child a::after {
   content: '\f054';
   padding: 4px 5px;
@@ -949,11 +892,6 @@ a[title="Facebook Share"] .fb-share::before {
   font-size: 14px;
 }
 
-.footer-copy-right a:hover {
-  color: var(--clr-grey2);
-  text-decoration: underline;
-}
-
 .footer-copy-right figure {
   display: inline-block;
 }
@@ -967,10 +905,6 @@ a[title="Facebook Share"] .fb-share::before {
   right: 2%;
   bottom: 32px;
   z-index: 4;
-}
-
-.top-chat a:hover {
-  opacity: 0.5;
 }
 
 .top-chat a:first-child {
@@ -1022,9 +956,504 @@ a[title="Facebook Share"] .fb-share::before {
 =================================*/ 
 
 /*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
 
+/*media query for min-width: 1024px starts here*/
+@media only screen and (min-width: 1024px) {
 
+  .header-top-left button:hover::before {
+    color: var(--clr-yellow);
+  }
+
+  .header-shiping-returns a:hover {
+    color: var(--clr-grey5);
+  }
+
+  .header-top-right a:hover,
+  .header-top-right a:hover::before {
+    color: var(--clr-grey5);
+  }
+
+  nav a:hover {
+    color: var(--clr-yellow);
+  }
+
+  nav .sub-menu-list a:hover {
+    color: var(--clr-grey2);
+  }
+
+  .banner-button-box a:hover {
+    background-color: var(--clr-pink);
+  }
+
+  .slider-control-box span:hover {
+    background-color: var(--clr-white);
+  }
+
+  .general-category-submenu a:hover {
+    color: var(--clr-pink);
+  }
+
+  .fitness-training-link a:hover {
+    color: var(--clr-pink);
+  }
+
+  .world-of-reebok a:hover {
+    color: var(--clr-pink);
+  }
+
+  .footer-brand-contact a:hover {
+    color: var(--clr-grey1);
+    text-decoration: underline;
+  }
+
+  .footer-submenu li:not(:first-child) a:hover {
+    padding-left: 4px;
+    color: var(--clr-pink)
+  }
+
+  .footer-menu-list a[title="Facebook Share"]:hover {
+    opacity: .7;
+  }
+
+  .footer-sign-up li:last-child a:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-pink);
+  }
+  
+  .footer-sign-up li:last-child a:hover::after {
+    background-color: var(--clr-pink);
+    color: var(--clr-white);
+  }
+
+  .footer-copy-right a:hover {
+    color: var(--clr-grey2);
+    text-decoration: underline;
+  }
+
+  .top-chat a:hover {
+    opacity: 0.5;
+  }
+
+} 
+
+/*media query for max-width: 1024px starts here*/
+@media only screen and (max-width: 1024px) {
+
+  .wrapper {
+    width: 95%;
+  }
+
+  /* header top section starts here */
+
+  .header-cart {
+    margin-right: 0;
+  }
+
+  /* header top section ends here */
+
+  /* banner section starts here */
+
+  .slider-list .wrapper {
+    right: 2.7%;
+  }
+
+  .banner-brand-name span {
+    font-size: 33px;
+  }
+
+  .banner-brand-name img {
+    width: 39%;
+    margin-left: 22px;
+  }
+
+  .banner-slider-content > p:first-of-type {
+    margin: 6px 0 0;
+  }
+
+  .banner-button-box a {
+    width: 20%;
+    padding: 6px 0;
+  }
+
+  /* banner section ends here */
+
+  /* general category section starts here */
+
+  .general-category-list .section-heading + li {
+    margin: 0 30px 0 0;
+  }
+
+  /* general category section ends here */
+
+  /* fitness & training section starts here */
+
+  .fitness-training ul {
+    margin-top: 40px;
+    justify-content: space-between;
+  }
+
+  .fitness-training li {
+    gap: 30px;
+  }
+
+  /* fitness & training section ends here */
+
+  /* world of reebok section starts here */
+
+  .world-of-reebok a {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* world of reebok section ends here */
+
+  /* footer section starts here */
+
+  /* footer sub-section 2 starts here */
+
+  .footer-menu-list {
+    flex-basis: 25%;
+  }
+
+  /* footer sub-section 2 ends here */
+
+  /* move-to-top-&-chat button section starts here */
+
+  .top-chat {
+    right: 3%;
+    bottom: 20px;
+  }
+
+  .top-chat a:first-child {
+    padding: 17px 7px 10px;
+    border-radius: 5px;
+  }
+
+  .top-chat a:last-child {
+    padding: 15px 0 0 20px;
+    margin-left: 5px;
+  }
+  
+  .top-chat a:last-child::before {
+    font-size: 40px;
+  }
+
+  /* move-to-top-&-chat button section ends here */
+
+  /* footer section ends here */
 
 }  
+
+/*media query for max-width: 767px starts here*/
+@media only screen and (max-width: 767px) {
+
+  /* banner section starts here */
+
+  .banner .slider-list {
+    height: 85vh;
+  }
+
+  .slider-list .wrapper {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    right: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .banner-brand-name img {
+    width: 65%;
+    margin-left: 10px;
+  }
+
+  .banner-button-box {
+    justify-content: center;
+  }
+
+  .banner-button-box a {
+    width: 40%;
+  }
+
+  .banner > .wrapper .slider-control {
+    width: 50%;
+    margin-left: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* banner section ends here */
+
+  /* general category section starts here */
+
+  .general-category .wrapper {
+    padding: 50px 0;
+  }
+
+  .general-category-menu {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .general-category-list {
+    flex-basis: 45%;
+  }
+
+  /* general category section ends here */
+
+  /* fitness & training section starts here */
+
+  .fitness-training .wrapper {
+    padding: 50px 0;
+    align-items: center;
+  }
+
+  .fitness-training ul {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .fitness-training li {
+    flex-basis: 40%;
+    gap: 15px;
+  }
+
+  .fitness-training figure {
+    width: 70%;
+  }
+
+  /* fitness & training section ends here */
+
+  /* world of reebok section starts here */
+
+  .world-of-reebok .wrapper {
+    padding: 50px 0;
+    align-items: center;
+  }
+
+  .world-of-reebok ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .world-of-reebok li {
+    flex-basis: 45%;
+  }
+
+  /* world of reebok section ends here */
+
+  /* footer section starts here */
+
+  /* footer sub-section 1 starts here */
+
+  .footer-brand-contact .wrapper {
+    padding: 20px;
+  }
+  .footer-brand-contact ul {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footer-brand-contact li {
+    padding: 0;
+  }
+
+  .footer-brand-contact li:nth-child(2),
+  .footer-brand-contact li:nth-child(3) {
+    box-shadow: none;
+  }
+
+  /* footer sub-section 1 ends here */
+
+  /* footer sub-section 2 starts here */
+
+  .footer-menu .wrapper {
+    padding: 30px 0;
+  }
+
+  .footer-menu .wrapper > ul {
+    flex-wrap: wrap;
+    gap: 30px;
+  } 
+
+  .footer-menu-list {
+    align-items: center;
+    text-align: center;
+    flex-basis: 100%;
+    gap: 30px;
+  }
+
+  .footer-menu-list .footer-submenu {
+    gap: 5px;
+  }
+  
+  .footer-submenu li:first-child {
+    font-size: 18px;
+  }
+
+  .footer-submenu li:not(:first-child) a {
+    font-size: 15px;
+  }
+
+  /* footer sub-section 2 ends here */
+
+  /* footer sub-section 3 starts here */
+
+  .footer-sign-up .wrapper {
+    text-align: center;
+    padding: 30px 0;
+  }
+  
+  .footer-sign-up ul {
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* footer sub-section 3 ends here */
+
+  /* footer sub-section 4 starts here */
+
+  .footer-payment-mode .wrapper {
+    padding: 30px 0;
+  }
+
+  .footer-payment-mode ul {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  /* footer sub-section 4 ends here */
+
+  /* footer sub-section 5 starts here */
+
+  .footer-copy-right .wrapper {
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  /* footer sub-section 5 ends here */
+
+}
+
+/*media query for max-width: 540px starts here*/
+@media only screen and (max-width: 540px) {
+
+  /* banner section starts here */
+
+  .banner-brand-name span {
+    font-size: 25px;
+  }
+
+  .banner-brand-name img {
+    width: 55%;
+  }
+
+  .banner-slider-content > p:first-of-type {
+    margin: 10px 10px 0 0;
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+  
+  .banner-slider-content > p:last-of-type {
+    margin: 25px 0 30px;
+    font-size: 13px;
+  }
+
+  .banner-button-box a {
+    font-size: 11px;
+  }
+
+  .banner > .wrapper .slider-control {
+    width: 70%;
+  }
+
+  /* banner section ends here */
+
+  /* general category section starts here */
+
+  .general-category-menu {
+    gap: 0;
+  }
+
+  .general-category-list {
+    padding: 25px 0;
+    border-bottom: 2px solid var(--clr-grey2);
+    flex-basis: 100%;
+  }
+
+  .general-category-list .section-heading {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .general-category-list:last-child {
+    border-bottom: none;
+  }
+
+  .general-category-list > ul {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* general category section ends here */
+
+  /* fitness & training section starts here */
+
+  .fitness-training ul {
+    gap: 0;
+  }
+
+  .fitness-training li {
+    padding: 30px 0;
+    border-bottom: 2px solid var(--clr-grey2);
+    flex-basis: 100%;
+  }
+
+  .fitness-training li:last-child {
+    border-bottom: none;
+  }
+
+  .fitness-training figure {
+    width: 50%;
+  }
+
+  /* fitness & training section ends here */
+
+  /* world of reebok section starts here */
+
+  .world-of-reebok ul {
+    gap: 0;
+  }
+  
+  .world-of-reebok li {
+    padding: 30px 0;
+    border-bottom: 2px solid var(--clr-grey2);
+    flex-basis: 70%;
+  }
+
+  .world-of-reebok li:last-child {
+    border-bottom: none;
+  }
+
+  /* world of reebok section ends here */
+
+   /* footer section starts here */
+
+   /* footer sub-section 3 starts here */
+
+   .footer-sign-up li:first-child {
+    font-size: 12px;
+  }
+
+   /* footer sub-section 3 ends here */
+
+   /* footer section ends here */
+
+}
