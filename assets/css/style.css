@@ -174,6 +174,10 @@ span {
   background-color: var(--clr-offwhite);
 }
 
+.header-top-left h1 {
+  flex-shrink: 0;
+}
+
 .header-top .wrapper {
   display: flex;
   align-items: center;
@@ -265,12 +269,9 @@ span {
 }
 
 .header-cart {
+  padding: 17px 32px 18px;
   margin-right: 5px;
   position: relative;
-}
-
-.header-cart {
-  padding: 17px 32px 18px;
 }
 
 .header-cart a {
@@ -304,6 +305,57 @@ span {
 }
 
 /* header top section ends here */
+
+/* menu toggle button starts here */
+
+.menu-toggle {
+  width: 32px;
+  height: 32px;
+  display: none;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  position: relative;
+  transition: all .3s;
+  background-color: var(--clr-pink);
+  text-indent: -99999px;
+}
+
+.bar::before,
+.bar::after {
+  content: '';
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  position: absolute;
+  left: 0;
+  transition: all .3s;
+  background-color: inherit;
+}
+
+.bar::before { top: 14px; }
+.bar::after { top: 28px; }
+
+/* below code is useful to add animation in hamburger */
+
+/* .menu-toggle:hover .bar {
+  transform: translateY(14px) rotate(45deg) scale(1.1);
+}
+
+.menu-toggle:hover .bar::before { top: 100px; }
+
+.menu-toggle:hover .bar::after {
+  top: 0;
+  transform: rotate(-90deg);
+} */
+
+/* menu toggle button ends here */
 
 /* header bottom section starts here */
 
@@ -367,11 +419,17 @@ nav .sub-menu {
   z-index: 5;
   transition: .3s;
   background-color: var(--clr-yellow);
+  box-shadow: 0 0 5px var(--clr-grey2);
   opacity: 0;
   visibility: hidden;
 }
 
 nav .menu-list a:hover ~ .sub-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sub-menu:hover {
   opacity: 1;
   visibility: visible;
 }
@@ -978,7 +1036,7 @@ a[title="Facebook Share"] .fb-share::before {
   }
 
   nav .sub-menu-list a:hover {
-    color: var(--clr-grey2);
+    color: var(--clr-pink);
   }
 
   .banner-button-box a:hover {
@@ -1148,6 +1206,164 @@ a[title="Facebook Share"] .fb-share::before {
 /*media query for max-width: 767px starts here*/
 @media only screen and (max-width: 767px) {
 
+  /* header section starts here */
+
+  header {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 11;
+    position: sticky;
+    top: 0;
+    background-color: var(--clr-offwhite);
+    box-shadow: 0 0 7px var(--clr-grey2)
+  }
+
+  /* header top */
+
+  .header-top {
+    background-color: transparent;
+  }
+
+  .header-top .wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header-top-left {
+    gap: 5px;
+  }
+
+  .header-top-left form {
+    margin: 0;
+  }
+
+  .header-top-left input {
+    padding: 9px 5px 8px;
+  }
+
+  .header-shiping-returns a {
+    display: none;
+  }
+
+  .header-wishlist,
+  .header-login {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .header-top-right a {
+    position: relative;
+    text-indent: -99999px;
+  }
+
+  .header-wishlist a::before {
+    display: none;
+  }
+  
+  .header-top-right {
+    display: flex;
+    padding: 0 10px;
+    gap: 10px;
+  }
+
+  .header-login a::before {
+    margin-right: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+  }
+
+  .header-cart {
+    margin-right: 0;
+  }
+
+  /* header bottom */
+
+  .menu-toggle {
+    display: block;
+    z-index: 12;
+    flex-shrink: 0;
+  }
+
+  nav {
+    width: 70%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+    background-color: var(--clr-black);
+  }
+
+  .menu-toggle:hover ~ nav,
+  nav:hover {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  nav .wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 70px 0;
+    align-items: flex-start;
+  }
+  
+  nav .main-menu {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+  
+  nav .menu-list {
+    padding: 10px 0 10px 20px;
+  }
+
+  nav .menu-list:last-child { 
+    position: relative;
+  }
+  
+  nav .menu-list:nth-child(6) > a,
+  nav .menu-list:nth-child(7) > a {
+    color: var(--clr-white);
+  }
+
+  nav .sub-menu {
+    padding: 0;
+    display: none;
+    position: relative;
+    top: 10px;
+    left: 0;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .sub-menu .sub-menu-list {
+    display: block;
+  }
+
+  nav .menu-list:hover > .sub-menu {
+    display: block;
+  }
+
+  nav .sub-menu-list > a {
+    color: var(--clr-white);
+  }
+
+  /* header section ends here */
+
   /* banner section starts here */
 
   .banner .slider-list {
@@ -1283,10 +1499,10 @@ a[title="Facebook Share"] .fb-share::before {
   } 
 
   .footer-menu-list {
-    align-items: center;
-    text-align: center;
     flex-basis: 100%;
+    align-items: center;
     gap: 30px;
+    text-align: center;
   }
 
   .footer-menu-list .footer-submenu {
@@ -1398,8 +1614,8 @@ a[title="Facebook Share"] .fb-share::before {
   }
 
   .general-category-list > ul {
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
 
   /* general category section ends here */
