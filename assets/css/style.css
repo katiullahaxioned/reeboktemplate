@@ -89,8 +89,8 @@ body {
 
 a { 
   display: inline-block;
-  transition: .3s;
   text-decoration: none; 
+  transition: .3s;
 }
 
 li {
@@ -149,11 +149,11 @@ span {
 }
 
 .section-heading {
-  transform: scaleY(1.9);
   color: var(--clr-grey2);
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
+  transform: scaleY(1.9);
 }
 
 /* common styling ends here */
@@ -227,20 +227,21 @@ span {
 }
 
 .header-shiping-returns a {
-  transform: scaley(1.5);
   color: var(--clr-grey2);
   font-size: 11px;
   font-weight: 600;
   text-transform: capitalize;
+  transform: scaley(1.5);
 }
 
 .header-wishlist {
-  box-shadow: inset 2px 0 5px var(--bg-transparent1);
   padding: 17px 15px 18px;
+  box-shadow: inset 2px 0 5px var(--bg-transparent1);
 }
+
 .header-login {
-  box-shadow: 2px 0 5px var(--bg-transparent1);
   padding: 15px 15px 18px;
+  box-shadow: 2px 0 5px var(--bg-transparent1);
 }
 
 .header-top-right a {
@@ -322,9 +323,9 @@ span {
   height: 4px;
   border-radius: 4px;
   position: relative;
-  transition: all .3s;
   background-color: var(--clr-pink);
   text-indent: -99999px;
+  transition: all .3s;
 }
 
 .bar::before,
@@ -335,16 +336,14 @@ span {
   border-radius: inherit;
   position: absolute;
   left: 0;
-  transition: all .3s;
   background-color: inherit;
+  transition: all .3s;
 }
 
 .bar::before { top: 14px; }
 .bar::after { top: 28px; }
 
-/* below code is useful to add animation in hamburger */
-
-/* .menu-toggle:hover .bar {
+.menu-toggle:hover .bar {
   transform: translateY(14px) rotate(45deg) scale(1.1);
 }
 
@@ -353,7 +352,7 @@ span {
 .menu-toggle:hover .bar::after {
   top: 0;
   transform: rotate(-90deg);
-} */
+}
 
 /* menu toggle button ends here */
 
@@ -454,9 +453,15 @@ nav .sub-menu-list > a {
   position: relative;
 }
 
+.banner .wrapper,
+.banner .slider-group {
+  width: 100%;
+  position: relative;
+}
+
 .banner .slider-list {
   width: 100%;
-  height: 62vh;
+  height: 59vh;
   position: relative;
 }
 
@@ -472,14 +477,13 @@ nav .sub-menu-list > a {
   object-fit: cover;
 }
 
-.slider-list .wrapper {
-  padding: 66px 0 0;
+.slider-list .section-wrapper {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 0;
-  right: 12.3%;
-  color: var(--clr-grey5);
+  top: 65px;
+  right: 12.25%;
+  color: var(--clr-grey5); 
   text-align: right;
   text-transform: uppercase;
 }
@@ -490,17 +494,23 @@ nav .sub-menu-list > a {
   vertical-align: middle;
 }
 
+.banner-brand-name {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .banner-brand-name img {
-  width: 35.5%;
-  margin-left: 25px;
+  width: 362px;
+  margin-left: 28px;
   box-shadow: 0 0 5px var(--clr-grey2);
 }
 
 .banner-slider-content > p:first-of-type {
-  margin: 6px 10px 0 0;
+  margin: 6px 0 0;
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 4px;
+  word-spacing: 2px;
 }
 
 .banner-slider-content > p:last-of-type {
@@ -519,7 +529,7 @@ nav .sub-menu-list > a {
 }
 
 .banner-button-box a {
-  width: 25.3%;
+  width: 257px;
   padding: 9px 0;
   border: 1px solid var(--clr-offwhite);
   border-radius: 2px;
@@ -529,6 +539,11 @@ nav .sub-menu-list > a {
   font-size: 15px;
   font-weight: 600;
   text-align: center;
+}
+
+.banner .wrapper > .section-wrapper {
+  width: 75.5%;
+  margin: 0 auto;
 }
 
 .banner > .wrapper .slider-control {
@@ -606,20 +621,23 @@ text-indent: 0;
 .general-category-menu {
   display: flex;
   align-items: center;
+  gap: 40px;
 }
 
-.general-category-list > ul {
+.general-category-list {
+  flex-basis: 25%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.general-category-list .section-heading {
-  margin-bottom: 10px;
-  flex: 1 0 100%;
+.general-category-list div {
+  display: flex;
+  gap: 30px;
 }
 
-.general-category-list .section-heading + li {
-  margin: 0 30px 0 15px;
+.general-category-list div figure {
+  margin-left: 15px;
 }
 
 .general-category-submenu {
@@ -784,14 +802,15 @@ text-indent: 0;
   gap: 3px;
 }
 
-.footer-submenu li:first-child {
+.footer-menu-list h4 {
+  margin-bottom: 2px;
   color: var(--clr-grey1);
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
 }
 
-.footer-submenu li:not(:first-child) a {
+.footer-submenu li a {
   color: var(--clr-white);
   font-size: 12px;
 }
@@ -802,8 +821,8 @@ text-indent: 0;
   justify-content: center;
 }
 .footer-menu-list a[title="Facebook Share"] {
-  margin-right: 18px;
   border-radius: 3px;
+  margin-right: 18px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -858,15 +877,12 @@ a[title="Facebook Share"] .fb-share::before {
 
 .footer-sign-up .wrapper {
   padding: 37px 0 27px;
-}
-
-.footer-sign-up ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.footer-sign-up li:first-child {
+.footer-sign-up .footer-signup-content {
   position: relative;
   transform: scaleY(2);
   color: var(--clr-white);
@@ -875,17 +891,17 @@ a[title="Facebook Share"] .fb-share::before {
   text-transform: uppercase;
 }
 
-.footer-sign-up li:first-child span {
+.footer-signup-content span {
   position: relative;
   transform: translateY(-2px);
 }
 
-.footer-sign-up li:first-child span:first-child {
+.footer-signup-content span:first-child {
   margin-right: 2px;
   color: var(--clr-pink);
 }
 
-.footer-sign-up li:last-child a {
+.footer-signup-button a {
   padding: 10px 13px 10px 7px;
   border-radius: 5px;
   background-color: var(--clr-pink);
@@ -895,7 +911,7 @@ a[title="Facebook Share"] .fb-share::before {
   text-transform: capitalize;
 }
 
-.footer-sign-up li:last-child a::after {
+.footer-signup-button a::after {
   content: '\f054';
   padding: 4px 5px;
   border-radius: 50%;
@@ -1064,7 +1080,7 @@ a[title="Facebook Share"] .fb-share::before {
     text-decoration: underline;
   }
 
-  .footer-submenu li:not(:first-child) a:hover {
+  .footer-submenu li a:hover {
     padding-left: 4px;
     color: var(--clr-pink)
   }
@@ -1073,18 +1089,17 @@ a[title="Facebook Share"] .fb-share::before {
     opacity: .7;
   }
 
-  .footer-sign-up li:last-child a:hover {
+  .footer-signup-button a:hover {
     background-color: var(--clr-white);
     color: var(--clr-pink);
   }
   
-  .footer-sign-up li:last-child a:hover::after {
+  .footer-signup-button a:hover::after {
     background-color: var(--clr-pink);
     color: var(--clr-white);
   }
 
   .footer-copy-right a:hover {
-    color: var(--clr-grey2);
     text-decoration: underline;
   }
 
@@ -1111,34 +1126,35 @@ a[title="Facebook Share"] .fb-share::before {
 
   /* banner section starts here */
 
-  .slider-list .wrapper {
-    right: 2.7%;
-  }
-
-  .banner-brand-name span {
-    font-size: 33px;
+  .slider-list .section-wrapper {
+    right: 2.5%;
   }
 
   .banner-brand-name img {
-    width: 39%;
-    margin-left: 22px;
+    width: 280px;
+    margin-left: 20px;
   }
 
   .banner-slider-content > p:first-of-type {
-    margin: 6px 0 0;
+    letter-spacing: 1px;
+    word-spacing: 5px;
   }
 
   .banner-button-box a {
-    width: 20%;
+    width: 200px;
     padding: 6px 0;
+  }
+
+  .banner .wrapper > .section-wrapper {
+    width: 95%;
   }
 
   /* banner section ends here */
 
   /* general category section starts here */
 
-  .general-category-list .section-heading + li {
-    margin: 0 30px 0 0;
+  .general-category-list div figure {
+    margin-left: 0;
   }
 
   /* general category section ends here */
@@ -1171,7 +1187,7 @@ a[title="Facebook Share"] .fb-share::before {
   /* footer sub-section 2 starts here */
 
   .footer-menu-list {
-    flex-basis: 25%;
+    flex-basis: 20%;
   }
 
   /* footer sub-section 2 ends here */
@@ -1236,7 +1252,7 @@ a[title="Facebook Share"] .fb-share::before {
   }
 
   .header-top-left form {
-    margin: 0;
+    display: none;
   }
 
   .header-top-left input {
@@ -1249,8 +1265,8 @@ a[title="Facebook Share"] .fb-share::before {
 
   .header-wishlist,
   .header-login {
-    box-shadow: none;
     padding: 0;
+    box-shadow: none;
   }
 
   .header-top-right a {
@@ -1263,8 +1279,8 @@ a[title="Facebook Share"] .fb-share::before {
   }
   
   .header-top-right {
-    display: flex;
     padding: 0 10px;
+    display: flex;
     gap: 10px;
   }
 
@@ -1291,7 +1307,7 @@ a[title="Facebook Share"] .fb-share::before {
 
   nav {
     width: 70%;
-    min-height: 100vh;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -1367,13 +1383,11 @@ a[title="Facebook Share"] .fb-share::before {
   /* banner section starts here */
 
   .banner .slider-list {
-    height: 85vh;
+    height: 95vh;
   }
 
-  .slider-list .wrapper {
-    padding: 0;
-    align-items: center;
-    justify-content: center;
+  .slider-list .section-wrapper {
+    width: 100%;
     top: 50%;
     right: 0;
     left: 50%;
@@ -1381,12 +1395,29 @@ a[title="Facebook Share"] .fb-share::before {
     text-align: center;
   }
 
+  .banner-slider-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-brand-name {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .banner-brand-name span {
+    font-size: 32px;
+  }
+
   .banner-brand-name img {
-    width: 65%;
+    width: 50%;
     margin-left: 10px;
   }
 
   .banner-button-box {
+    width: 100%;
     justify-content: center;
   }
 
@@ -1509,11 +1540,12 @@ a[title="Facebook Share"] .fb-share::before {
     gap: 5px;
   }
   
-  .footer-submenu li:first-child {
-    font-size: 18px;
+  .footer-menu-list h4 {
+    margin-bottom: 5px;
+    font-size: 17px;
   }
 
-  .footer-submenu li:not(:first-child) a {
+  .footer-submenu li a {
     font-size: 15px;
   }
 
@@ -1522,13 +1554,9 @@ a[title="Facebook Share"] .fb-share::before {
   /* footer sub-section 3 starts here */
 
   .footer-sign-up .wrapper {
-    text-align: center;
     padding: 30px 0;
-  }
-  
-  .footer-sign-up ul {
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     gap: 30px;
   }
 
@@ -1550,8 +1578,8 @@ a[title="Facebook Share"] .fb-share::before {
   /* footer sub-section 5 starts here */
 
   .footer-copy-right .wrapper {
-    text-align: center;
     padding: 30px 0;
+    text-align: center;
   }
 
   /* footer sub-section 5 ends here */
@@ -1563,18 +1591,19 @@ a[title="Facebook Share"] .fb-share::before {
 
   /* banner section starts here */
 
+  .slider-list .section-wrapper {
+    padding: 0 10px;
+  }
+
   .banner-brand-name span {
     font-size: 25px;
   }
 
-  .banner-brand-name img {
-    width: 55%;
-  }
-
   .banner-slider-content > p:first-of-type {
-    margin: 10px 10px 0 0;
+    margin: 10px 0 0;
     font-size: 13px;
     letter-spacing: 2px;
+    word-spacing: 0;
   }
   
   .banner-slider-content > p:last-of-type {
@@ -1602,20 +1631,15 @@ a[title="Facebook Share"] .fb-share::before {
     padding: 25px 0;
     border-bottom: 2px solid var(--clr-grey2);
     flex-basis: 100%;
+    align-items: center;
   }
 
   .general-category-list .section-heading {
     margin-bottom: 20px;
-    text-align: center;
   }
 
   .general-category-list:last-child {
     border-bottom: none;
-  }
-
-  .general-category-list > ul {
-    align-items: center;
-    justify-content: center;
   }
 
   /* general category section ends here */
@@ -1637,7 +1661,7 @@ a[title="Facebook Share"] .fb-share::before {
   }
 
   .fitness-training figure {
-    width: 50%;
+    width: 65%;
   }
 
   /* fitness & training section ends here */
@@ -1651,11 +1675,18 @@ a[title="Facebook Share"] .fb-share::before {
   .world-of-reebok li {
     padding: 30px 0;
     border-bottom: 2px solid var(--clr-grey2);
-    flex-basis: 70%;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .world-of-reebok li:last-child {
     border-bottom: none;
+  }
+
+  .world-of-reebok li figure {
+    width: 65%;
   }
 
   /* world of reebok section ends here */
@@ -1664,7 +1695,7 @@ a[title="Facebook Share"] .fb-share::before {
 
    /* footer sub-section 3 starts here */
 
-   .footer-sign-up li:first-child {
+   .footer-sign-up .footer-signup-content {
     font-size: 12px;
   }
 
